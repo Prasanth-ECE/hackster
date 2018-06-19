@@ -1,0 +1,14 @@
+<form class="example-form" [formGroup]="loginform" (ngSubmit)="login()">
+  <mat-form-field class="example-full-width">
+    <input matInput name="name" formControlName="name" placeholder="User Name">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="password" name="password" formControlName="password" placeholder="Password">
+  </mat-form-field>
+  <div class="button-row">
+    <button mat-raised-button  type="submit" [disabled]="!loginform.valid">Login</button>
+  </div>
+</form>
+
+

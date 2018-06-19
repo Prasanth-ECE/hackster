@@ -1,0 +1,33 @@
+<div class="body">
+  <div class="rowlayout">
+      <h2>Build this HTML code</h2>
+      <div class="questionbox"><span>
+              <span class="dotted-border tooltip expand" data-title="Start Paragraph">&lt;p&gt;</span>
+              Polar bears live in the north pole
+              <span class="dotted-border tooltip expand" data-title="End Paragraph">&lt;/p&gt;</span>
+          </span>
+      </div>
+  <div class="width100">
+      <div class="box1 fleft">
+          
+          <div class="dotted-box" #htmlToAdd>
+                  <button class="btn btn-outline-primary"
+                  *ngFor="let value of questionboxvalue; let i = index" (click)="getbvalue($event)" [attr.data-index]="value.index">{{value.value}}</button>
+          </div>
+          <p class="para visible-mobile">Tap buttons below to build:</p>
+          <p class="para mleft15 visible-desktop">Click buttons below to build:</p>
+          <div class="event" #questionbox>
+              <button class="btn btn-outline-primary shadowbutton"
+              *ngFor="let qvalue of question1; let i = index" (click)="getvalue($event)" [attr.data-index]="i">{{qvalue}}</button>
+          </div>
+      </div>
+      
+      <div class="box2 fright">
+          <p>Result:</p>
+          <div class="answerbox" id="answerbox" #answerbox>
+
+          </div>
+      </div>
+  </div>
+  </div>
+</div>
